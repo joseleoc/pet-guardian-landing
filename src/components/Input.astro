@@ -1,0 +1,28 @@
+---
+interface Props {
+  label: string;
+  type: "text" | "email";
+  id: string;
+  placeholder?: string;
+}
+const { label, type, id, placeholder } = Astro.props;
+---
+
+<label
+  for={id}
+  class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+  >{label}</label
+>
+<div class="relative mb-6">
+  <div
+    class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5"
+  >
+    <slot name="icon" />
+  </div>
+  <input
+    type={type}
+    id={id}
+    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 ps-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+    placeholder={placeholder}
+  />
+</div>

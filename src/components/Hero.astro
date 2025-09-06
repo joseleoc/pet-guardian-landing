@@ -1,14 +1,43 @@
 ---
-
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import heroImage from "../assets/img/hero-image.webp";
 ---
 
 <main>
-  <h1>PET GUARDIAN</h1>
-  <h2>LA APLICACIÓN PERFECTA PARA TU MASCOTA</h2>
-  <h3>¿QUÉ ES PET GUARDIAN?</h3>
-  <p>
-    Pet Guardian es el punto de encuentro para veterinarios, dueños y mascotas.
-    Nuestra misión es mejorar el cuidado animal, ofreciendo acceso organizado a
-    historiales médicos y herramientas de comunicación eficientes.
-  </p>
+  <article class="m-6 flex h-[80dvh] flex-col-reverse gap-4 md:flex-row">
+    <section class="flex flex-1 flex-col items-center justify-center gap-4">
+      <p class="text-primary text-2xl font-bold md:text-4xl lg:text-5xl">
+        Revoluciona el cuidado de mascotas, conectando dueños y veterinarios en
+        un ecosistema digital.
+      </p>
+      <p>
+        Accede a una plataforma digital para gestionar la salud de tu mascota,
+        recibir aletrtas personalizadas y coenctar con profesionales cercanos.
+      </p>
+      <Button id="goToRegister2"> Regístrate Ahora </Button>
+    </section>
+    <section class="flex flex-1 items-center justify-center">
+      <Image
+        src={heroImage}
+        alt="Imagen de una mascota feliz, representando la salud y bienestar de las mascotas en Pet Guardian."
+        loading="lazy"
+        class="aspect-square h-auto w-2/3 max-w-[250px] rounded-3xl shadow-md md:max-w-[500px]"
+      />
+    </section>
+  </article>
 </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const goToRegisterButton = document.getElementById("goToRegister2");
+    if (goToRegisterButton) {
+      goToRegisterButton.addEventListener("click", function () {
+        const registerSection = document.getElementById("register");
+        if (registerSection) {
+          registerSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
+  });
+</script>

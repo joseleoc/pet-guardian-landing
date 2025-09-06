@@ -1,38 +1,30 @@
-<section>
-  <h3>FUNCIONALIDADES SEGÚN EL TIPO DE UUSARIO</h3>
+---
+import Card from "./Card.astro";
+---
 
-  <ul>
-    <li>
-      <div>img</div>
-      <div>
-        <h5>Dueños</h5>
-        <p>
-          Gestiona múltiples mascotas, recibe notificaciones importantes y obtén
-          recomendaciones para el cuidado de tus mascotas.
-        </p>
-      </div>
-    </li>
+<section class="m-6 flex flex-col gap-6">
+  <h2 class="text-primary text-center text-3xl font-bold">
+    ¿Por qué elegirnos?
+  </h2>
+  <div
+    class="grid grid-cols-1 place-items-center gap-4 md:grid-cols-3 md:flex-row"
+  >
+    <Card
+      icon="ICON"
+      title="Para dueños"
+      description="Gestiona el historial médico completo tu mascota, recibe alertas personalizadas y accede a profesionales cercanos."
+    />
 
-    <li>
-      <div>img</div>
-      <div>
-        <h5>Mascotas</h5>
-        <p>
-          Perfiles detallados ocn la información mpedica, hábitos y necesidades
-          específicas.
-        </p>
-      </div>
-    </li>
+    <Card
+      icon="ICON"
+      title="Para clínicas"
+      description="Optimiza la gestión de pacientes con registros centralizados, programación inteligente y comunicación automática."
+    />
 
-    <li>
-      <div>img</div>
-      <div>
-        <h5>Veterinarios / Clínicas</h5>
-        <p>
-          Acceso a historiales médicos, gestión de citas y recordatorios
-          automatizados.
-        </p>
-      </div>
-    </li>
-  </ul>
+    <Card
+      icon="ICON"
+      title="Para tu mascota"
+      description="Registros médicos precisos que facilitan la prevención proactiva y aseguran el mejor cuidado posible."
+    />
+  </div>
 </section>

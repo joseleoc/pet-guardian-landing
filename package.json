@@ -5,7 +5,7 @@
   "author": {
     "name": "Leonardo Contreras",
     "email": "joseleoc123@gmail.com",
-    "url": "joseleoc.com"
+    "url": "https://joseleoc.com"
   },
   "scripts": {
     "dev": "astro dev",
@@ -14,6 +14,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.7",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.8",
     "tailwindcss": "^4.1.11"

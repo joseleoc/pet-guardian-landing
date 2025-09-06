@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #cccdf8;
-  --color-secondary: rgb(78 105 160);
+  --color-primary: #0d244f;
+  --color-primary-contrast: #ffffff;
+  --color-secondary: #3b82f6;
+  --color-secondary-contrast: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
