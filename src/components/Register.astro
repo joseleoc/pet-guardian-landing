@@ -1,23 +1,29 @@
 ---
+import { Image } from "astro:assets";
 import Button from "./Button.astro";
 import Input from "./Input.astro";
+import registerImage from "../assets/img/register-image.webp";
 ---
 
 <article
   id="register"
   class="bg-primary text-primary-contrast flex flex-col items-center justify-around gap-4 p-6 md:flex-row"
 >
-  <div class="flex-1">
-    a
-    <img src="" alt="" />
+  <div class="flex-1 flex justify-center items-center">
+    <Image
+      src={registerImage}
+      alt="Imagen de una mascota feliz, representando la salud y bienestar de las mascotas en Pet Guardian."
+      loading="lazy"
+      class="aspect-square h-auto w-2/3 max-w-[250px] rounded-3xl shadow-md md:max-w-[500px]"
+    />
   </div>
   <section class="flex-1">
     <h2 class="text-center text-2xl font-bold md:text-start">
       ¡Regístrate ahora!
     </h2>
     <p class="mt-2 mb-4 text-base text-pretty text-gray-300">
-      Accede a la información exclusiva. Descubri por fin una gestión sencilla
-      para el cuidado de tu mascota. Te enviaremos todos lso detalles a tu
+      Accede a la información exclusiva. Descubre por fin una gestión sencilla
+      para el cuidado de tu mascota. Te enviaremos todos los detalles a tu
       correo.
     </p>
 

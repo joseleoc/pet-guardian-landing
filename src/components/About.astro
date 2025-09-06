@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Card from "./Card.astro";
+import forOwnersImg from "../assets/img/owners.png";
+import forClinicsImg from "../assets/img/clinics.png";
+import forPetsImg from "../assets/img/pets.png";
 ---
 
 <section class="m-6 flex flex-col gap-6">
@@ -10,21 +14,42 @@ import Card from "./Card.astro";
     class="grid grid-cols-1 place-items-center gap-4 md:grid-cols-3 md:flex-row"
   >
     <Card
-      icon="ICON"
       title="Para dueños"
       description="Gestiona el historial médico completo tu mascota, recibe alertas personalizadas y accede a profesionales cercanos."
-    />
+    >
+      <Image
+        src={forOwnersImg}
+        alt="Imagen de un dueño con su mascota"
+        loading="lazy"
+        class="h-auto w-30"
+        slot="icon"
+      />
+    </Card>
 
     <Card
-      icon="ICON"
       title="Para clínicas"
       description="Optimiza la gestión de pacientes con registros centralizados, programación inteligente y comunicación automática."
-    />
+    >
+      <Image
+        src={forClinicsImg}
+        alt="Imagen de una clínica veterinaria"
+        loading="lazy"
+        class="h-auto w-30"
+        slot="icon"
+      />
+    </Card>
 
     <Card
-      icon="ICON"
       title="Para tu mascota"
       description="Registros médicos precisos que facilitan la prevención proactiva y aseguran el mejor cuidado posible."
-    />
+    >
+      <Image
+        src={forPetsImg}
+        alt="Imagen de una mascota"
+        loading="lazy"
+        class="h-auto w-30"
+        slot="icon"
+      />
+    </Card>
   </div>
 </section>
